@@ -1,0 +1,18 @@
+<h2>Sessions</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Started at</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% sessions.each do |session| %>
+      <tr>
+        <td><%= session[:id] %></td>
+        <td><%= session[:started_at] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
