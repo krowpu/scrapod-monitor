@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'sinatra/base'
+require 'redis'
 
 module Scrapod
   ##
@@ -11,6 +12,10 @@ module Scrapod
 
     get '/' do
       'Hello, World!'
+    end
+
+    def redis
+      @redis ||= Redis.new
     end
   end
 end
