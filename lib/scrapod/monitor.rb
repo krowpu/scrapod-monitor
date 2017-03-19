@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'scrapod/monitor/version'
-
 require 'sinatra'
 
 module Scrapod
