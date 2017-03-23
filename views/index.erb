@@ -1,3 +1,22 @@
+<h2>Processes</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Started at</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% processes.each do |process| %>
+      <tr>
+        <td><%= process.id %></td>
+        <td><%= process.started_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <h2>Sessions</h2>
 
 <table>

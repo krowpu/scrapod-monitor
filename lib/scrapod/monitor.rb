@@ -13,7 +13,10 @@ module Scrapod
     set :root, File.expand_path('../..', File.dirname(__FILE__))
 
     get '/' do
-      erb :index, locals: { sessions: Redis::Session.all(redis) }
+      erb :index, locals: {
+        processes: Redis::Process.all(redis),
+        sessions:  Redis::Session.all(redis),
+      }
     end
 
     def redis
